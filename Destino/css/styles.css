@@ -1,0 +1,348 @@
+:root {
+    --negro: #000000;
+    --primario: #1073BA;
+    --gris: #cecbcb;
+    --blanco: #FFFFFF;
+    --grisClaro: #e1e1e1;
+    --secundario: #741d51;
+
+    --separacion: 5rem;
+
+    --fuentePrincipal: 'Lexend', sans-serif;;
+    --fuenteSecundaria: 'Montserrat', sans-serif;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+   
+}
+
+.contenedor {
+    max-width: 130rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: var(--fuenteSecundaria);
+}
+
+h1 {
+    font-size: 3rem ;
+}
+h2 {
+    font-size: 2.6rem;
+}
+h3 {
+    font-size: 2.8rem;
+}
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Header **/
+
+.header{
+    background-image: url(../img/inicio.webp);
+    height: 50rem;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  
+}
+
+@media (min-width: 768px) {
+    .contenido-header {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.contenido-header {
+    display: flex;
+    flex-direction: column;
+    height: calc(40rem - 4rem);
+    justify-content: space-between;
+}
+.texto-header {
+    text-align: center;
+}
+
+.nombre-sitio {
+    font-weight: 2rem;
+    text-align: right; 
+    margin-top: 8rem;
+}
+
+@media (min-width: 768px) {
+    .nombre-sitio {
+        font-size: 5rem;
+    }
+}
+
+.subtitulo-sitio {
+    text-align: right;
+    margin-top: 10rem;   
+}
+
+@media (min-width: 768px) {
+    .subtitulo-sitio {
+        margin-top: 20rem;
+    } 
+}
+
+.busqueda-sitio {
+   background-color: var(--blanco);
+   padding: 2rem 5rem;
+   border-radius: 3rem;
+   font-size: 2rem;
+   font-weight: 700;
+   display: block;
+   text-decoration: none;
+   background-image: url(../img/lupa.png);
+   background-position: right center;
+   background-repeat: no-repeat;
+   border: none;
+}
+
+@media (min-width: 768px) {
+    .busqueda-sitio {
+        display: inline-block;
+    }
+}
+
+.barra {
+    padding: 20px 0;
+    background: #741d51; 
+    background: -moz-linear-gradient(left, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #741d51 0%,#e44e52 100%); 
+}
+
+/* Iconos */
+@media (min-width: 768px) {
+    .iconos {
+        display: flex;
+        gap: 2rem;
+        
+    }
+}
+
+.icono {
+    display: flex;
+    align-items: center;
+    padding-left: 90px;
+    font-size: 1.4rem;
+}
+
+.icono img {
+    width: 4rem;
+    margin-right: 1.5rem;
+}
+
+
+/* Main **/
+
+.destinos {
+    padding: 5rem 0;
+}
+
+.header-destinos {
+    font-size: 5rem;
+    margin-bottom: 5rem;
+}
+
+.listado-destinos {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+    padding: 2rem;
+    
+}
+
+.destino {
+    background-color: var(--grisClaro);
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+    .listado-destinos {
+        display: grid;
+        gap: 2rem;
+         grid-template-columns: repeat(3, 1fr);
+         
+    }
+}
+
+.destino-imagen {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;  
+}
+
+.destino-nombre {
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.informacion {
+    padding: 2rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    line-height: 1.8;
+    text-align: center;
+}
+.precio {
+    text-align: center;
+    color: var(--primario);
+    font-size: 2.2rem;
+    margin: 0;
+    padding: 1rem;
+}
+
+/** Premium */
+.contenedor-cards {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) );
+}
+.premium {
+    background-image: url(../img/hospedaje-pro.jpg);
+    height: 40rem;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; 
+    grid-template-columns: unset; 
+}
+@media(min-width:768px) {
+    .premium {
+        grid-template-columns: auto 40%;
+    }
+}
+
+.premium .info {
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.premium .info h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+@media (min-width:768px) {
+    .premium .info {
+        grid-column: 2 / 3;
+    }
+    .premium .info h2 {
+        text-align: right;
+    }
+}
+
+.boton-mi-destino {
+    background-color: var(--grisClaro);
+    display: block;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    color: var(--negro);
+    font-size: 1.6rem;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    height: 50px;
+    width: 300px;
+}
+
+.boton-mi-destino:hover {
+    background-color: var(--secundario);
+}
+
+/* destinos populares */
+.populares {
+    margin-top: 5rem;
+}
+.populares-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+}
+@media(min-width:768px) {
+    .populares-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(min-width:1024px) {
+    .populares-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.popular {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+}
+.popular .nombre {
+    margin: 0;
+}
+.popular-distancia {
+    font-size: 2rem;
+}
+.popular-imagen {
+    width: 14rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--grisClaro);
+    padding-top: 3rem;
+}
+
+.footer .contenedor {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+.footer .nav-footer {
+    padding: 1rem;
+}
+.footer .nav-footer h3 {
+    font-size: 2rem;
+}
+.footer .menu a {
+    color: var(--negro);
+    text-decoration: none;
+    display: block;
+    padding-top: .6rem;
+    font-size: 1.5rem;
+}
+@media(min-width:768px) {
+    .footer .contenedor {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+ 
+
+
+
+
+
